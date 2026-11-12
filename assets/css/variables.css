@@ -1,0 +1,113 @@
+/* assets/css/variables.css — Design tokens
+   SNSU institutional navy + blue, with gold as a sparing accent. */
+
+:root {
+  /* Brand */
+  --navy-950: #071330;
+  --navy-900: #0b1b3d;
+  --navy-800: #10264f;
+  --navy-700: #183a73;
+  --navy-dark: var(--navy-950);
+  --navy-primary: var(--navy-900);
+  --navy-light: var(--navy-700);
+  --navy-surface: #1e3a8a;
+
+  --brand-blue: #2563eb;
+  --brand-blue-hover: #1d4ed8;
+  --brand-blue-active: #1e40af;
+  --brand-blue-light: #eef4ff;
+  --brand-blue-soft: #dbe7ff;
+  --brand-blue-border: #c3d6fe;
+  --focus-ring: 0 0 0 4px rgba(37, 99, 235, 0.16);
+
+  --accent-gold: #f2b01e;
+  --accent-gold-light: #fff6dd;
+
+  /* Status (state colors are reserved for status meaning only) */
+  --status-pending-text: #9a5b05;
+  --status-pending-bg: #fff4dc;
+  --status-pending-border: #fde3a7;
+  --status-pending-dot: #f59e0b;
+
+  --status-progress-text: #1d4ed8;
+  --status-progress-bg: #eaf1ff;
+  --status-progress-border: #c7d9fe;
+  --status-progress-dot: #3b82f6;
+
+  --status-resolved-text: #0f6b4f;
+  --status-resolved-bg: #e3f7ee;
+  --status-resolved-border: #b4e8cf;
+  --status-resolved-dot: #10b981;
+
+  /* Priority */
+  --priority-critical-text: #a11a1a;
+  --priority-critical-bg: #fde8e8;
+  --priority-critical-border: #f8bcbc;
+  --priority-high-text: #b4440d;
+  --priority-high-bg: #ffeedd;
+  --priority-high-border: #fdcfa6;
+  --priority-medium-text: #92610a;
+  --priority-medium-bg: #fff4dc;
+  --priority-medium-border: #fde3a7;
+  --priority-low-text: #3f4b5f;
+  --priority-low-bg: #eef1f6;
+  --priority-low-border: #d5dbe6;
+
+  /* Feedback */
+  --danger: #dc2626;
+  --danger-bg: #fdecec;
+  --success: #059669;
+  --success-bg: #e3f7ee;
+  --warning: #d97706;
+  --warning-bg: #fff4dc;
+
+  /* Surfaces */
+  --bg-body: #f4f6fb;
+  --bg-card: #ffffff;
+  --bg-subtle: #f8fafd;
+  --bg-muted: #eef1f6;
+  --bg-sidebar: var(--navy-900);
+  --bg-header: #ffffff;
+
+  /* Borders */
+  --border-color: #e4e8f0;
+  --border-strong: #d3d9e4;
+  --border-subtle: #eef1f6;
+  --divider: #e4e8f0;
+
+  /* Text */
+  --text-primary: #0f172a;
+  --text-secondary: #46536a;
+  --text-muted: #6b7689;
+  --text-light: #98a2b3;
+  --text-inverse: #ffffff;
+
+  /* Type */
+  --font-family-display: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-family-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', 'Cascadia Mono', Menlo, Consolas, monospace;
+
+  /* Elevation — soft, low-contrast */
+  --shadow-xs: 0 1px 2px rgba(16, 24, 40, 0.04);
+  --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.06);
+  --shadow-md: 0 4px 12px -2px rgba(16, 24, 40, 0.08), 0 2px 4px -2px rgba(16, 24, 40, 0.04);
+  --shadow-lg: 0 12px 24px -6px rgba(16, 24, 40, 0.12), 0 4px 8px -4px rgba(16, 24, 40, 0.06);
+  --shadow-xl: 0 24px 48px -12px rgba(16, 24, 40, 0.22);
+
+  /* Radii */
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+  --radius-pill: 9999px;
+
+  /* Layout */
+  --header-height: 64px;
+  --sidebar-width: 264px;
+  --content-max: 1320px;
+
+  /* Motion */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+}

@@ -1,0 +1,80 @@
+/* assets/css/timeline.css — Status tracker, concern detail blocks, activity timeline */
+
+/* ---- Status stepper ---- */
+.status-tracker {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+  padding: 4px 0;
+}
+.status-tracker::before {
+  content: '';
+  position: absolute;
+  top: 21px;
+  left: 16.66%;
+  right: 16.66%;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--border-color);
+}
+.status-step { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; }
+.status-step-icon {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--border-strong);
+  display: grid; place-items: center;
+  font-size: 0.9rem; font-weight: 700;
+  color: var(--text-light);
+  transition: all var(--transition-normal);
+}
+.status-step-label { font-size: 0.82rem; font-weight: 600; color: var(--text-muted); }
+.status-step.completed .status-step-icon { background: var(--success); border-color: var(--success); color: #fff; }
+.status-step.completed .status-step-label { color: #0f6b4f; }
+.status-step.current .status-step-icon { background: var(--brand-blue); border-color: var(--brand-blue); color: #fff; box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.15); }
+.status-step.current .status-step-label { color: var(--brand-blue-hover); font-weight: 700; }
+.status-step.completed.current .status-step-icon { background: var(--success); border-color: var(--success); box-shadow: 0 0 0 6px rgba(5, 150, 105, 0.15); }
+.status-step.completed.current .status-step-label { color: #0f6b4f; }
+
+/* ---- Description ---- */
+.concern-description-block { margin-bottom: 20px; }
+.concern-description-title { font-size: 0.7rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+.concern-description-text { font-size: 0.95rem; color: var(--text-primary); line-height: 1.7; white-space: pre-line; }
+
+.attachment-preview-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.85rem;
+  box-shadow: var(--shadow-xs);
+  transition: all var(--transition-fast);
+}
+.attachment-preview-card:hover { border-color: var(--brand-blue-border); background: var(--brand-blue-light); color: var(--brand-blue-hover); }
+.attachment-image { max-width: 520px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color); margin-bottom: 10px; background: var(--bg-subtle); }
+.attachment-image img { width: 100%; max-height: 300px; object-fit: cover; }
+
+/* ---- Activity timeline ---- */
+.timeline { position: relative; padding-left: 30px; }
+.timeline::before { content: ''; position: absolute; top: 8px; bottom: 8px; left: 10px; width: 2px; background: var(--border-color); border-radius: 2px; }
+.timeline-item { position: relative; margin-bottom: 16px; }
+.timeline-item:last-child { margin-bottom: 0; }
+.timeline-dot {
+  position: absolute; left: -26px; top: 14px;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: #fff; border: 3px solid var(--brand-blue);
+}
+.timeline-item.is-reopen .timeline-dot { border-color: var(--warning); }
+.timeline-box { background: #fff; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px 16px; }
+.timeline-item.is-reopen .timeline-box { background: #fffbf0; border-color: #fde3a7; }
+.timeline-header { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+.timeline-author { font-size: 0.86rem; font-weight: 700; color: var(--text-primary); display: inline-flex; align-items: center; gap: 6px; }
+.timeline-time { font-size: 0.76rem; color: var(--text-muted); }
+.timeline-department { font-size: 0.72rem; font-weight: 600; background: var(--brand-blue-light); color: var(--brand-blue-hover); padding: 2px 8px; border-radius: var(--radius-pill); }
+.timeline-content { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; }
